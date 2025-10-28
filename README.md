@@ -13,41 +13,77 @@ ChatMate is a **real-time messaging web app** built with **FastAPI**, **Next.js*
 
 chatmate/
 ├── backend/ # FastAPI backend
+
 │ ├── app/
+
 │ │ ├── api/v1/ # Route definitions
+
 │ │ │ ├── auth.py
+
 │ │ │ ├── profiles.py
+
 │ │ │ ├── connections.py
+
 │ │ │ ├── messages.py
+
 │ │ │ ├── conversations.py
+
 │ │ │ └── ws.py # WebSocket logic
+
 │ │ ├── core/ # Core config and services
+
 │ │ │ ├── config.py
+
 │ │ │ ├── security.py
+
 │ │ │ └── supabase_client.py
+
 │ │ └── schemas/ # Pydantic schema models
+
 │ │ ├── auth.py
+
 │ │ ├── profiles.py
+
 │ │ ├── messages.py
+
 │ │ ├── connections.py
+
 │ │ └── conversations.py
+
 │ └── main.py
+
 │
+
 ├── chat-frontend/ # Next.js + TypeScript frontend
+
 │ ├── src/
+
 │ │ ├── pages/
+
 │ │ │ ├── index.tsx
+
 │ │ │ ├── login.tsx
+
 │ │ │ ├── signup.tsx
+
 │ │ │ ├── profile.tsx
+
 │ │ │ ├── connections.tsx
+
 │ │ │ └── chat/[id].tsx # Chat UI
+
 │ │ ├── services/ # API service helpers
+
 │ │ └── store/ # Zustand stores for state mgmt
+
 │ ├── public/
+
 │ └── package.json
+
 │
+
 ├── .gitignore
+
 └── README.md
 
 ---
@@ -81,34 +117,50 @@ Your schema consists of 4 core tables:
 ---
 
 ## ⚙️ Setup & Installation
+
 🔹 1. Clone the repository
+
 git clone https://github.com/bhavyatummala/realtime-chat-app.git
+
 cd realtime-chat-app
 
 🔹 2. Setup environment variables
+
 📂 backend/.env
+
 SUPABASE_URL=https://your-project.supabase.co
+
 SUPABASE_KEY=your-service-role-key
+
 JWT_SECRET=your-jwt-secret
 
 📂 chat-frontend/.env.local
+
 NEXT_PUBLIC_API_URL=http://localhost:8000
 
 ---
 
 ## 🚀 Running the Project
+
 ▶️ Backend (FastAPI)
+
 cd backend
+
 poetry install
+
 poetry run uvicorn app.main:app --reload
 
 
 Server → http://localhost:8000
+
 Docs → http://localhost:8000/docs
 
 ▶️ Frontend (Next.js)
+
 cd chat-frontend/chat-frontend
+
 bun install        # or npm install
+
 bun dev            # or npm run dev
 
 Frontend → http://localhost:3000
@@ -117,10 +169,15 @@ Frontend → http://localhost:3000
 
 ## 💡 Features
 ✅ Supabase Auth – Secure sign up & login
+
 ✅ Profile Management – Create & update user info
+
 ✅ Connections – Send / accept / view requests
+
 ✅ Chat – Real-time WebSocket chat between connected users
+
 ✅ Message Formatting – Grouped by date, timestamps, auto-scroll
+
 ✅ UI Enhancements – Responsive design, smooth navigation, auto-resizing input
 
 ---
@@ -156,9 +213,13 @@ Both sender and receiver see new messages live.
 ## 🧭 Demo Workflow
 
 Signup/Login → via Supabase Auth
+
 Profile Setup → create your profile
+
 Connections Page → send or accept requests
+
 Chat Page → real-time messages appear instantly
+
 Back Navigation → go from Chat → Connections → Profile
 
 ---
@@ -166,14 +227,21 @@ Back Navigation → go from Chat → Connections → Profile
 ## 🔮 Future Enhancements
 
 🟢 File & Image sharing in chat
+
 🟢 “Typing…” indicators
+
 🟢 Real-time online status
+
 🟢 Push notifications
+
 🟢 Group conversations
+
 🟢 Dark mode toggle
 
 ---
 
 ## 👩‍💻 Author
+
 Bhavya Tummala
+
 tummalabhavya5b7@gmail.com
