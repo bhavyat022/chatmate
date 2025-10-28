@@ -1,23 +1,23 @@
-# Node
-node_modules/
-.next/
-bun.lockb
-package-lock.json
-
 # Python
 __pycache__/
 *.pyc
-venv/
 .env
-poetry.lock
+.venv/
 
-# VS Code
-.vscode/
+# Node
+node_modules/
+.next/
+out/
+.env.local
+.env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Build
-dist/
-build/
-
-# System
+# OS files
 .DS_Store
 Thumbs.db
+
+# Editor
+.vscode/
+.idea/
