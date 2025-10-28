@@ -128,15 +128,25 @@ Frontend → http://localhost:3000
 ## 🔄 WebSocket Chat Flow
 
 User connects to WebSocket:
+
 ws://localhost:8000/ws/chat/{user_id}
+
 Backend tracks active users.
+
 When a message is sent:
+
 It’s saved in Supabase.
+
 The backend broadcasts it via WebSocket.
+
 Frontend listens:
+
 ws.onmessage = (event) => {
+
   const msg = JSON.parse(event.data);
+  
   addOne(msg); // update local store instantly
+  
 };
 
 Both sender and receiver see new messages live.
