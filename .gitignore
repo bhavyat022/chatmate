@@ -1,0 +1,23 @@
+# Node
+node_modules/
+.next/
+bun.lockb
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+poetry.lock
+
+# VS Code
+.vscode/
+
+# Build
+dist/
+build/
+
+# System
+.DS_Store
+Thumbs.db
